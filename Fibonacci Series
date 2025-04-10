@@ -1,0 +1,36 @@
+Python:
+
+n=int(input())
+f1,f2=0,1
+print(f1,f2,end=" ")
+for i in range(2,n):
+    f3=f1+f2
+    f1=f2
+    f2=f3
+    print(f3,end=" ")
+
+----------------------------------------------
+Cpp:
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n,f3;
+    cin>>n;
+    int f1=0;
+    int f2=1;
+    cout<<f1<<f2;
+    for(int num=2;num<n;num++){
+        f3=f1+f2;
+        f1=f2;
+        f2=f3;
+        cout<<f3;
+    }
+    return 0;
+}
+-----------------------------------------------------
+Input:
+5
+
+Output:
+01123
