@@ -1,0 +1,18 @@
+largest number
+
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+    int n,d;
+    int maxdigit=0;
+    cin>>n;
+    while(n>0){
+        d=n%10;
+        if(d>maxdigit){
+            maxdigit=d;
+        }
+        n=n/10;
+    }cout<<maxdigit;
+    return 0;
+}
