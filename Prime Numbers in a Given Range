@@ -1,0 +1,65 @@
+Python:
+
+l=int(input())
+h=int(input())
+for num in range(l,h):
+    if(num>1):
+        for i in range(2,num):
+            if(num%i==0):
+                break
+        else:
+            print(num)
+
+----------------------------------------------
+Cpp:
+
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+    int n,m;
+    cin>>n>>m;
+    for(int num=n;num<=m;num++){
+        if(num<=1)
+        continue;
+        int c=0;
+        for(int i=1;i<=num;i++){
+            if(num%i==0){
+                c++;
+            }
+        }
+        if(c==2){
+            cout<<num<<" ";}
+    }
+    return 0;
+}
+--------------------------------------------
+
+#include <iostream>
+using namespace std;
+int main() {
+    int l,h;
+    cin>>l>>h;
+    for(int num=l;num<=h;++num){
+        if(num>1){
+            bool isPrime = true;
+            for(int i=2;i<=num/2;++i){
+                if(num%i==0){
+                    isPrime = false;
+                    break;
+                }
+            }if(isPrime){
+             cout<<num;}
+        }
+        
+    }
+    return 0;
+}
+
+=====================================================
+Input:
+2 10
+
+Output:
+2 3 5 7 
+
