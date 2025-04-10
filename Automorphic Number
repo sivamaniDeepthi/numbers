@@ -1,0 +1,18 @@
+Automorphic Number
+An Automorphic Number (also called a circular number) is a number whose square ends with the number itself.
+
+Example:
+5² = 25 → ends with 5 
+
+76² = 5776 → ends with 76 
+
+13 = 169 → does not end with 13 
+
+--------------------------------------------------------------------
+
+n=int(input())
+sqrt=n*n
+if str(sqrt).endswith(str(n)):
+    print("Automorphic Number")
+else:
+    print("no")
