@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+    int n;
+    cin>>n;
+    if(n<=1){
+        cout<<0;
+    }
+    int c;
+    c=0;
+    for(int num=2;num<=n;num++){
+      int divcount=0;
+    for(int i=1;i<=num;i++){
+        if(num%i==0){
+            divcount++;
+        }
+    } 
+    if(divcount==2){
+        c++;}
+    }
+    cout<<c;
+    return 0;
+    
+    
+}
+
+----------------------------------
+input:
+10
+
+Output:
+4
