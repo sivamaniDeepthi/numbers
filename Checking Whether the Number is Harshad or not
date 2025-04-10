@@ -1,0 +1,42 @@
+Checking Whether the Number is Harshad or not
+
+Example
+Input : 21
+Output : Yes ' It's a Harshad Number.
+Explanation : The sum of the digits of 21 is 3 i.e 2 + 1. As the number 21 is divisible by 3, It's a Harshad Number.
+----------------------------------------------------------------------------------------------------------------------------------------
+Python:
+
+n=int(input())
+temp=n
+s=0
+while n>0:
+    r=n%10
+    s=s+r
+    n=n//10
+if(temp%s==0):
+    print("harshad")
+else:
+    print("no")
+----------------------------------------------------
+Cpp:
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n,r,s=0;
+    cin>>n;
+    int temp=n;
+    while (n>0){
+        r=n%10;
+        s=s+r;
+        n=n/10;
+    }
+    if(temp%s==0){
+        cout<<"harshad";
+    }else{
+        cout<<"no";
+    }
+
+    return 0;
+}
