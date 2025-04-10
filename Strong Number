@@ -1,0 +1,49 @@
+Python:
+
+n=int(input())
+temp=n
+s=0
+while temp>0:
+    r=temp%10
+    f=1
+    for i in range(1,r+1):
+        f=f*i
+    s=s+f
+    temp=temp//10
+if(s==n):
+    print("strong")
+else:
+    print("no")
+------------------------------------------------
+Cpp:
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n,r,s=0;
+    cin>>n;
+    int temp=n;
+    while(temp>0){
+        r=temp%10;
+        int f=1;
+        for(int i=1;i<=r;i++){
+            f=f*i;
+        }s=s+f;
+        temp=temp/10;
+    }if(s==n){
+        cout<<"strong";
+    }else{
+        cout<<"no";
+    }
+
+    return 0;
+}
+--------------------------------------------------
+Input:
+145
+
+For example, 145 is a strong number because:
+1! + 4! + 5! = 1 + 24 + 120 = 145 
+
+Output:
+strong
