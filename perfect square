@@ -1,0 +1,32 @@
+python:
+
+import math
+num = int(input("Enter a number: "))
+sqrt = math.sqrt(num)
+if sqrt.is_integer():
+    print(f"{num} is a perfect square.")
+else:
+    print(f"{num} is not a perfect square.")
+--------------------------------------------------------
+Cpp:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+
+    // Calculate the square root
+    double sqrt_num = sqrt(num);
+
+    // Check if the square root is an integer
+    if (sqrt_num == floor(sqrt_num)) {
+        cout << num << " is a perfect square." << endl;
+    } else {
+        cout << num << " is not a perfect square." << endl;
+    }
+
+    return 0;
+}
