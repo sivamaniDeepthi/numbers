@@ -1,0 +1,42 @@
+Python:
+
+n=int(input())
+m=int(input())
+for num in range(n,m):
+    temp=num
+    s=0
+    l=len(str(num))
+    while num>0:
+        r=num%10
+        s=s+r**l
+        num=num//10
+    if(s==temp):
+        print(temp)
+
+------------------------------------------------
+Cpp:
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n,m,r;
+    cin>>n>>m;
+    for(int num=n;num<=m;num++){
+        int s=0;
+        int temp=num;
+        while(temp>0){
+            r=temp%10;
+            s=s+(r*r*r);
+            temp=temp/10;
+        }
+        if(s==num){
+        cout<<num;}
+    }
+    return 0;
+}
+-----------------------------------------------
+Input:
+100 200
+
+Output:
+153
